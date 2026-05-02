@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dtau2mt3warhf"]
+
+[ext_resource type="Shader" uid="uid://c0gxth3fgiidi" path="res://materials/ball/ball.gdshader" id="1_gvn8a"]
+
+[resource]
+shader = ExtResource("1_gvn8a")
+shader_parameter/node_size = Vector2(0, 0)

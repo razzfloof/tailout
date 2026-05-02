@@ -2,16 +2,31 @@
 
 [ext_resource type="Script" uid="uid://defkorjwbr6aw" path="res://ball.gd" id="1_41u45"]
 [ext_resource type="Texture2D" uid="uid://brqhhmj01k8k2" path="res://icon.svg" id="1_x8fbi"]
+[ext_resource type="Material" uid="uid://dtau2mt3warhf" path="res://materials/ball/ball.tres" id="3_ktgx5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_41u45"]
 size = Vector2(128, 128)
 
 [node name="Ball" type="CharacterBody2D" unique_id=949851802]
 script = ExtResource("1_41u45")
-speed = null
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1849311524]
+visible = false
 texture = ExtResource("1_x8fbi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=280663707]
 shape = SubResource("RectangleShape2D_41u45")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1822330039]
+material = ExtResource("3_ktgx5")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2

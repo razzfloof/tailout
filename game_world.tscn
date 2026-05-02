@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://xeuf0beqtv3i" path="res://box.tscn" id="2_bvgre"]
 [ext_resource type="PackedScene" uid="uid://b5hwewkmfqa7q" path="res://paddle.tscn" id="3_ea1x0"]
 [ext_resource type="Script" uid="uid://b47d1r2mx67b8" path="res://set_amount_box_spawner.gd" id="4_e08lw"]
+[ext_resource type="Material" uid="uid://cpu7plfrpryf1" path="res://materials/brick/red_brick.tres" id="5_e3xe6"]
+[ext_resource type="Material" uid="uid://ckuogkospgc0w" path="res://materials/brick/green_brick.tres" id="6_mcbma"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hly68"]
 
@@ -17,7 +19,6 @@ point_count = 3
 
 [node name="Ball" parent="." unique_id=949851802 instance=ExtResource("1_hly68")]
 position = Vector2(550, 248)
-speed = 400.0
 
 [node name="WorldBorders" type="StaticBody2D" parent="." unique_id=1041341503]
 
@@ -52,3 +53,17 @@ metadata/_custom_type_script = "uid://b47d1r2mx67b8"
 
 [node name="Path2D" type="Path2D" parent="SetAmountBoxSpawner" unique_id=1717175134]
 curve = SubResource("Curve2D_e3xe6")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=16471889]
+material = ExtResource("5_e3xe6")
+offset_left = 187.0
+offset_top = 690.0
+offset_right = 369.0
+offset_bottom = 834.0
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=334886067]
+material = ExtResource("6_mcbma")
+offset_left = 479.0
+offset_top = 692.0
+offset_right = 733.0
+offset_bottom = 831.0
