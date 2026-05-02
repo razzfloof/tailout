@@ -1,0 +1,14 @@
+ColorRect
+Path2D
+SetAmountBoxSpawner
+Area2D
+Sprite2D
+CollisionShape2D
+CharacterBody2D
+BoxSpawner
+Node
+Node2D
+Line2D
+StaticBody2D
+Polygon2D
+CollisionPolygon2D

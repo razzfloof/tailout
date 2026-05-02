@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://d3kbtxn4gm3ce"]
+
+[ext_resource type="PackedScene" uid="uid://hwrdtgxargqy" path="res://ball.tscn" id="1_hly68"]
+[ext_resource type="PackedScene" uid="uid://xeuf0beqtv3i" path="res://box.tscn" id="2_bvgre"]
+[ext_resource type="PackedScene" uid="uid://b5hwewkmfqa7q" path="res://paddle.tscn" id="3_ea1x0"]
+[ext_resource type="Script" uid="uid://b47d1r2mx67b8" path="res://set_amount_box_spawner.gd" id="4_e08lw"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hly68"]
+
+[sub_resource type="Curve2D" id="Curve2D_e3xe6"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 264, 609, 0, 0, 0, 0, 909, 429, 0, 0, 0, 0, 1074, 130)
+}
+point_count = 3
+
+[node name="GameWorld" type="Node2D" unique_id=1364113976]
+
+[node name="Ball" parent="." unique_id=949851802 instance=ExtResource("1_hly68")]
+position = Vector2(550, 248)
+speed = 400.0
+
+[node name="WorldBorders" type="StaticBody2D" parent="." unique_id=1041341503]
+
+[node name="LeftWall" type="CollisionShape2D" parent="WorldBorders" unique_id=626375015]
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_hly68")
+
+[node name="RightWall" type="CollisionShape2D" parent="WorldBorders" unique_id=1449258967]
+position = Vector2(1280, 0)
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_hly68")
+
+[node name="TopWall" type="CollisionShape2D" parent="WorldBorders" unique_id=2087799849]
+rotation = 3.1415927
+shape = SubResource("WorldBoundaryShape2D_hly68")
+
+[node name="BottomWall" type="CollisionShape2D" parent="WorldBorders" unique_id=1604225224]
+position = Vector2(0, 2856)
+shape = SubResource("WorldBoundaryShape2D_hly68")
+
+[node name="Box" parent="." unique_id=1558228058 instance=ExtResource("2_bvgre")]
+position = Vector2(992, 647)
+
+[node name="paddle" parent="." unique_id=1164147682 instance=ExtResource("3_ea1x0")]
+position = Vector2(662, 2457)
+
+[node name="SetAmountBoxSpawner" type="Node" parent="." unique_id=1837066148 node_paths=PackedStringArray("spawn_path")]
+script = ExtResource("4_e08lw")
+spawn_path = NodePath("Path2D")
+number_spawned = 4.0
+metadata/_custom_type_script = "uid://b47d1r2mx67b8"
+
+[node name="Path2D" type="Path2D" parent="SetAmountBoxSpawner" unique_id=1717175134]
+curve = SubResource("Curve2D_e3xe6")
