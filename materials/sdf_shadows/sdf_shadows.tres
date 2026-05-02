@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bjki2307mka20"]
+
+[ext_resource type="Shader" uid="uid://cw30eni3j81e5" path="res://materials/sdf_shadows/sdf_shadows.gdshader" id="1_hpx42"]
+
+[resource]
+shader = ExtResource("1_hpx42")
+shader_parameter/softness = 0.1
+shader_parameter/angle = -52.0
+shader_parameter/max_distance = 100.0

@@ -3,7 +3,7 @@
 [ext_resource type="Shader" uid="uid://comlgh5alql8d" path="res://materials/brick/brick.gdshader" id="1_rk2tw"]
 
 [sub_resource type="Gradient" id="Gradient_kqadw"]
-colors = PackedColorArray(0, 0.74509805, 0, 1, 0.31764707, 0.6039216, 1, 1)
+colors = PackedColorArray(0, 0.90772974, 0, 1, 0, 0.8509804, 0.8666667, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_8gei8"]
 gradient = SubResource("Gradient_kqadw")
@@ -15,6 +15,6 @@ shader_parameter/radius = 10.0
 shader_parameter/corner_thickness = 15.0
 shader_parameter/outline_color = Color(0.0174, 0.06, 0.04225, 0.57254905)
 shader_parameter/outline_thickness = 10.0
-shader_parameter/shine_strength = 1.0
-shader_parameter/shine_thickness = 20.0
-shader_parameter/shine_progress = 0.0
+shader_parameter/shine_strength = 3.0
+shader_parameter/shine_thickness = 40.0
+shader_parameter/shine_progress = 0.262000012445
